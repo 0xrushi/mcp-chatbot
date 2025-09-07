@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mcp1": {
+      "url": "https://192.xx.x.x.:123/sse"
+    },
+    "mcp2": {
+      "url": "192.xx.x.x.:3456/sse"
+    }
+  }
+}

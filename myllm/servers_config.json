@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "tor-search": {
+      "url": "https://ts.emberfang.xyz/sse"
+    },
+    "seedr": {
+      "url": "https://tsed.emberfang.xyz/sse"
+    }
+  }
+}

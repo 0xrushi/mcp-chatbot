@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "myllm"
+version = "0.1.0"
+authors = [
+    {name = "0xrushi"},
+]
+description = "A Python package for MCP (Model Context Protocol) chatbot interactions"
+readme = "README.MD"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "fastmcp>=0.1.0",
+    "uvicorn>=0.32.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=22.0",
+    "flake8>=4.0",
+    "mypy>=0.950",
+]
+
+[project.scripts]
+myllm = "myllm.cli:run"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["myllm*"]
+
+[tool.setuptools.package-data]
+myllm = ["*.json"]
